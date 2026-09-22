@@ -1,5 +1,3 @@
-# ripple.EventsTicketing
-
 # Ripple Events Ticketing
 
 A .NET 9 Web API for creating events, defining priced ticket tiers, and selling tickets
