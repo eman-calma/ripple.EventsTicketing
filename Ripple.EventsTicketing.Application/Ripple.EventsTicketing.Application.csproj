@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="MediatR" Version="14.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Reports\Commands\" />
+    <Folder Include="Reports\Handlers\" />
+    <Folder Include="Reports\Queries\" />
+    <Folder Include="Tickets\Commands\" />
+    <Folder Include="Tickets\Handlers\" />
+    <Folder Include="Tickets\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ripple.EventsTicketing.Domain\Ripple.EventsTicketing.Domain.csproj" />
+    <ProjectReference Include="..\Ripple.EventsTicketing.Infrastructure\Ripple.EventsTicketing.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
