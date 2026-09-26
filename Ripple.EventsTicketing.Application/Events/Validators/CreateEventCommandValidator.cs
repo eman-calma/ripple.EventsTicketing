@@ -43,9 +43,7 @@ public class CreateEventCommandValidator : AbstractValidator<CreateEventCommand>
             });
 
         RuleFor(x => x)
-            .Must(command =>
-                command.PricingTiers.Sum(x => x.Capacity)
-                == command.TotalCapacity)
+            .Must(command => command.PricingTiers.Sum(x => x.Capacity) == command.TotalCapacity)
             .WithMessage(
                 "The sum of pricing tier capacities must equal the event total capacity.");
     }

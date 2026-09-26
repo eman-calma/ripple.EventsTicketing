@@ -58,8 +58,7 @@ public class UpdateEventCommandValidator: AbstractValidator<UpdateEventCommand>
     private static bool HaveUniqueIds(IReadOnlyCollection<UpdatePricingTierCommand> tiers)
     {
         var ids = tiers
-            .Where(x => x.Id.HasValue)
-            .Select(x => x.Id!.Value)
+            .Select(x => x.Id)
             .ToList();
 
         return ids.Count == ids.Distinct().Count();

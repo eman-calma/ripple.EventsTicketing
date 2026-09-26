@@ -13,7 +13,7 @@ public record UpdateEventCommand(
     : IRequest;
 
 public record UpdatePricingTierCommand(
-    Guid? Id,
+    Guid Id,
     string Name,
     decimal Price,
     int Capacity);
